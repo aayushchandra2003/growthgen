@@ -2,6 +2,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
 
+    // Hide nav on scroll down, show on scroll up
+    const nav = document.querySelector('nav');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (currentScroll <= 0) {
+            nav.classList.remove('nav-hidden');
+            return;
+        }
+
+        if (currentScroll > lastScroll && !nav.classList.contains('nav-hidden')) {
+            // Scroll down
+            nav.classList.add('nav-hidden');
+        } else if (currentScroll < lastScroll && nav.classList.contains('nav-hidden')) {
+            // Scroll up
+            nav.classList.remove('nav-hidden');
+        }
+        lastScroll = currentScroll;
+    });
+
     // Select all elements with the 'scroll-anim' class inside 'stagger-group'
     const staggerGroups = document.querySelectorAll('.stagger-group');
 
