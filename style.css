@@ -39,8 +39,8 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; lett
 h3 { font-size: clamp(1.2rem, 2vw, 1.8rem); font-weight: 800; }
 p { font-size: 1.125rem; font-weight: 500; color: var(--text-secondary); }
 
-.highlight-text { background: var(--accent-lime); padding: 0 8px; display: inline-block; position: relative; }
-.highlight-pink { background: var(--accent-pink); color: #fff; padding: 0 8px; }
+.highlight-text { background: var(--accent-lime); padding: 0 8px; display: inline-block; position: relative; border-radius: 8px; }
+.highlight-pink { background: var(--accent-pink); color: #fff; padding: 0 8px; border-radius: 8px; }
 
 /* Layout */
 .container {
