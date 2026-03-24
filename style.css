@@ -108,19 +108,31 @@ nav.nav-hidden {
 .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
 
 @media (max-width: 768px) {
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 16px; }
-  .section { padding: 50px 0; }
+  nav { padding: 12px 0; }
+  
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 24px; }
+  .section { padding: 60px 0; }
+  
+  .hero { 
+    display: block !important;
+    min-height: auto !important; 
+    padding-top: 80px !important;
+    padding-bottom: 60px !important; 
+  }
+  
   .container { padding: 0 20px; }
   .neo-card { padding: 24px; }
-  h1 { font-size: 2.6rem; line-height: 1.1; }
-  h2 { font-size: 2rem; line-height: 1.2; }
+  
+  h1 { font-size: 2.6rem; line-height: 1.1; margin-bottom: 24px; }
+  h2 { font-size: 2rem; line-height: 1.2; margin-bottom: 20px; }
   p { font-size: 1.05rem !important; }
   
   .hero-pills { 
     flex-direction: row; 
     flex-wrap: wrap; 
     justify-content: center; 
-    gap: 10px; 
+    gap: 12px; 
+    margin-bottom: 32px;
   }
   .hero-pills .pill {
     font-size: 0.9rem !important;
@@ -135,12 +147,13 @@ nav.nav-hidden {
     text-align: center; 
     padding: 18px 24px !important;
     font-size: 1.15rem !important;
+    margin-top: 24px;
   }
   
   .nav-content { 
     flex-direction: row; 
     justify-content: space-between; 
-    padding: 14px 0; 
+    padding: 0; 
     gap: 12px;
   }
   .logo-wrap { gap: 8px !important; }
@@ -153,6 +166,7 @@ nav.nav-hidden {
     font-size: 0.9rem !important;
     box-shadow: 2px 2px 0px #121212 !important;
     gap: 8px !important;
+    margin-top: 0;
   }
   nav .neo-btn i { width: 16px; height: 16px; }
   
