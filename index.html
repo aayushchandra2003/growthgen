@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrowthGen — Growth Operating System for Startups</title>
+  <meta name="description" content="GrowthGen is not an agency. It's your Growth Operating System. We connect strategy, execution, brand, and tech into one compounding system." />
+  <meta name="theme-color" content="#080808" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NOISE TEXTURE OVERLAY -->
+  <div class="noise-overlay"></div>
+
+  <!-- GRID OVERLAY -->
+  <div class="grid-overlay"></div>
+
+  <!-- ═══════════════════════════════════════════ NAV ═══ -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GrowthGen</span>
+      </a>
+      <div class="nav-links">
+        <a href="#solution">System</a>
+        <a href="#services">Engage</a>
+        <a href="#tech">Tech</a>
+        <a href="#process">Process</a>
+      </div>
+      <a href="tel:+918178630426" class="btn btn-nav">Fix My Growth</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#solution">System</a>
+      <a href="#services">Engage</a>
+      <a href="#tech">Tech</a>
+      <a href="#process">Process</a>
+      <a href="tel:+918178630426" class="btn btn-primary">Fix My Growth</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ HERO ═══ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Growth Operating System
+      </div>
+      <h1 class="hero-headline reveal reveal-delay-1">
+        Stop growing<br /><em>in pieces.</em>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        Most startups don't lack effort.<br />They lack a system.
+      </p>
+      <p class="hero-tagline reveal reveal-delay-3">
+        We connect what your business keeps breaking.
+      </p>
+      <div class="hero-ctas reveal reveal-delay-4">
+        <a href="tel:+918178630426" class="btn btn-primary btn-glow">Fix My Growth System</a>
+        <a href="#solution" class="btn btn-ghost">See How It Works →</a>
+      </div>
+    </div>
+
+    <!-- ANIMATED SYSTEM DIAGRAM -->
+    <div class="hero-visual reveal reveal-delay-3">
+      <div class="system-diagram">
+        <div class="sys-node" data-node="product">
+          <div class="sys-node-inner">
+            <div class="sys-icon">⬡</div>
+            <span>Product</span>
+          </div>
+        </div>
+        <div class="sys-connector connector-1">
+          <div class="connector-line"></div>
+          <div class="connector-dot"></div>
+        </div>
+        <div class="sys-node" data-node="gtm">
+          <div class="sys-node-inner">
+            <div class="sys-icon">◈</div>
+            <span>GTM</span>
+          </div>
+        </div>
+        <div class="sys-connector connector-2">
+          <div class="connector-line"></div>
+          <div class="connector-dot"></div>
+        </div>
+        <div class="sys-node" data-node="brand">
+          <div class="sys-node-inner">
+            <div class="sys-icon">◉</div>
+            <span>Brand</span>
+          </div>
+        </div>
+        <div class="sys-connector connector-3">
+          <div class="connector-line"></div>
+          <div class="connector-dot"></div>
+        </div>
+        <div class="sys-node" data-node="execution">
+          <div class="sys-node-inner">
+            <div class="sys-icon">⚡</div>
+            <span>Execution</span>
+          </div>
+        </div>
+        <div class="sys-center">
+          <div class="sys-center-ring"></div>
+          <div class="sys-center-core">
+            <span>GrowthGen<br/>OS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll to see the system</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ TICKER ═══ -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Strategy that ships</span>
+      <span class="ticker-dot">✦</span>
+      <span>No fluff. Only signal</span>
+      <span class="ticker-dot">✦</span>
+      <span>We fix, not just advise</span>
+      <span class="ticker-dot">✦</span>
+      <span>Systems over services</span>
+      <span class="ticker-dot">✦</span>
+      <span>Built by founders. For founders</span>
+      <span class="ticker-dot">✦</span>
+      <span>Remove guesswork. Add compound</span>
+      <span class="ticker-dot">✦</span>
+      <span>Strategy that ships</span>
+      <span class="ticker-dot">✦</span>
+      <span>No fluff. Only signal</span>
+      <span class="ticker-dot">✦</span>
+      <span>We fix, not just advise</span>
+      <span class="ticker-dot">✦</span>
+      <span>Systems over services</span>
+      <span class="ticker-dot">✦</span>
+      <span>Built by founders. For founders</span>
+      <span class="ticker-dot">✦</span>
+      <span>Remove guesswork. Add compound</span>
+      <span class="ticker-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ PROBLEM ═══ -->
+  <section class="section problem-section" id="problem">
+    <div class="container">
+      <div class="section-label reveal">The Reality</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        You're not failing.<br /><em>Your system is.</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        90,000+ startups in India. Most stuck in the same loop.
+      </p>
+
+      <div class="problem-loop reveal reveal-delay-2">
+        <div class="loop-item">Hire agency</div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-item">No strategy</div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-item">Hire consultant</div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-item">No execution</div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-item loop-end">Repeat.</div>
+      </div>
+
+      <div class="problem-cards">
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="problem-number">01</div>
+          <div class="problem-tag">Strategy without execution</div>
+          <p class="problem-text">You got a deck.<br />Nothing shipped.</p>
+          <div class="problem-glow"></div>
+        </div>
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="problem-number">02</div>
+          <div class="problem-tag">Execution without strategy</div>
+          <p class="problem-text">Money went out.<br />Growth didn't come back.</p>
+          <div class="problem-glow"></div>
+        </div>
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="problem-number">03</div>
+          <div class="problem-tag">No integration</div>
+          <p class="problem-text">Everything works.<br />Together, nothing works.</p>
+          <div class="problem-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SOLUTION ═══ -->
+  <section class="section solution-section" id="solution">
+    <div class="container">
+      <div class="section-label reveal">The System</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        One system.<br /><em>Built to compound.</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        Four disciplines. One connected operating system. Built to feed each other.
+      </p>
+
+      <!-- Row 1: Block 01 → arrow → Block 02 -->
+      <!-- Row 2: middle divider arrow row -->
+      <!-- Row 3: Block 04 ← arrow ← Block 03 -->
+      <div class="system-grid">
+        <!-- ROW 1 -->
+        <div class="system-block reveal reveal-delay-1">
+          <div class="system-block-number">01</div>
+          <div class="system-block-icon">⬡</div>
+          <h3>Product Direction</h3>
+          <p>What to build. Who it's for. Why now. We remove guesswork from your roadmap.</p>
+          <div class="system-block-tags">
+            <span>ICP Clarity</span>
+            <span>Roadmap</span>
+            <span>Build-or-Don't</span>
+          </div>
+        </div>
+        <div class="system-arrow system-arrow-h reveal reveal-delay-2">
+          <div class="arrow-line"></div>
+          <div class="arrow-head">→</div>
+        </div>
+        <div class="system-block reveal reveal-delay-2">
+          <div class="system-block-number">02</div>
+          <div class="system-block-icon">◈</div>
+          <h3>GTM & Launch</h3>
+          <p>Messaging. Channels. Execution. We ship your launch, not just plan it.</p>
+          <div class="system-block-tags">
+            <span>Messaging</span>
+            <span>Channels</span>
+            <span>Launch</span>
+          </div>
+        </div>
+        <!-- ROW 2: divider with circuit line -->
+        <div class="system-arrow system-arrow-v reveal reveal-delay-3">
+          <div class="arrow-line"></div>
+          <div class="arrow-head">⟳</div>
+          <div class="arrow-line"></div>
+        </div>
+        <!-- ROW 3 (reverse flow) -->
+        <div class="system-block reveal reveal-delay-4">
+          <div class="system-block-number">04</div>
+          <div class="system-block-icon">⚡</div>
+          <h3>In-House Tech</h3>
+          <p>Custom tools. Automated systems. We don't just advise. We build your advantage.</p>
+          <div class="system-block-tags">
+            <span>SaaS Tools</span>
+            <span>Automation</span>
+            <span>IP Build</span>
+          </div>
+        </div>
+        <div class="system-arrow system-arrow-back reveal reveal-delay-3">
+          <div class="arrow-head">←</div>
+          <div class="arrow-line"></div>
+        </div>
+        <div class="system-block reveal reveal-delay-3">
+          <div class="system-block-number">03</div>
+          <div class="system-block-icon">◉</div>
+          <h3>Brand & Positioning</h3>
+          <p>Narrative. Identity. Trust. Your brand becomes the moat others can't copy.</p>
+          <div class="system-block-tags">
+            <span>Narrative</span>
+            <span>Identity</span>
+            <span>Trust</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="system-compound-line reveal">
+        <span>All four feed each other. That's how growth compounds.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ WHY GROWTHGEN ═══ -->
+  <section class="section why-section" id="why">
+    <div class="container">
+      <div class="section-label reveal">The Difference</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        Others do parts.<br /><em>We own the outcome.</em>
+      </h2>
+
+      <div class="comparison-table reveal reveal-delay-2">
+        <div class="comp-header">
+          <div class="comp-cell comp-label"></div>
+          <div class="comp-cell comp-dim">Freelancers</div>
+          <div class="comp-cell comp-dim">Agencies</div>
+          <div class="comp-cell comp-dim">Consultants</div>
+          <div class="comp-cell comp-highlight">
+            <span class="comp-brand-name">GrowthGen</span>
+            <span class="comp-brand-tag">OS</span>
+          </div>
+        </div>
+        <div class="comp-row reveal reveal-delay-1">
+          <div class="comp-cell comp-label">Strategy</div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-partial">~</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-check-dim">✓</span></div>
+          <div class="comp-cell comp-highlight"><span class="comp-check">✓</span></div>
+        </div>
+        <div class="comp-row reveal reveal-delay-2">
+          <div class="comp-cell comp-label">Execution</div>
+          <div class="comp-cell comp-dim"><span class="comp-partial">~</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-check-dim">✓</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-highlight"><span class="comp-check">✓</span></div>
+        </div>
+        <div class="comp-row reveal reveal-delay-3">
+          <div class="comp-cell comp-label">Brand</div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-partial">~</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-highlight"><span class="comp-check">✓</span></div>
+        </div>
+        <div class="comp-row reveal reveal-delay-4">
+          <div class="comp-cell comp-label">Tech / Tools</div>
+          <div class="comp-cell comp-dim"><span class="comp-partial">~</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-highlight"><span class="comp-check">✓</span></div>
+        </div>
+        <div class="comp-row reveal reveal-delay-5">
+          <div class="comp-cell comp-label">Integration</div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-highlight"><span class="comp-check">✓</span></div>
+        </div>
+        <div class="comp-row reveal reveal-delay-6">
+          <div class="comp-cell comp-label">Owns Outcome</div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-dim"><span class="comp-x">✕</span></div>
+          <div class="comp-cell comp-highlight"><span class="comp-check">✓</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ WHO WE SERVE ═══ -->
+  <section class="section audience-section" id="audience">
+    <div class="container">
+      <div class="section-label reveal">Who We Fix</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        Is this you?
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        We work with founders who are done trying everything except the right system.
+      </p>
+
+      <div class="audience-grid">
+        <div class="audience-card reveal reveal-delay-1">
+          <div class="audience-icon">🔁</div>
+          <div class="audience-tag">5-Year Stagnant Startups</div>
+          <p class="audience-pain">"You've tried agencies.<br />You've tried hiring.<br /><strong>Nothing clicked.</strong>"</p>
+          <p class="audience-fix">You don't need more effort. You need a connected system that stops the leak.</p>
+        </div>
+        <div class="audience-card reveal reveal-delay-2">
+          <div class="audience-icon">🚀</div>
+          <div class="audience-tag">New Unfunded Startups</div>
+          <p class="audience-pain">"Day 1. No budget for mistakes.<br /><strong>Need to build right from scratch.</strong>"</p>
+          <p class="audience-fix">We help you get product, brand, and GTM right before the first rupee burns wrong.</p>
+        </div>
+        <div class="audience-card reveal reveal-delay-3">
+          <div class="audience-icon">📦</div>
+          <div class="audience-tag">D2C & E-commerce Brands</div>
+          <p class="audience-pain">"Content's going out.<br /><strong>Revenue isn't coming in.</strong>"</p>
+          <p class="audience-fix">We fix the gap between what you're saying and what customers are buying.</p>
+        </div>
+        <div class="audience-card reveal reveal-delay-4">
+          <div class="audience-icon">📈</div>
+          <div class="audience-tag">B2B SaaS Companies</div>
+          <p class="audience-pain">"Founder-led sales.<br />Thin pipeline.<br /><strong>Need a system.</strong>"</p>
+          <p class="audience-fix">We build the GTM engine that lets you stop being the whole sales team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SERVICES ═══ -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-label reveal">How We Engage</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        Three ways<br />to work with us.
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        No retainers for the sake of it. Only outcomes.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-label">Start here</div>
+          <div class="service-duration">30 Days</div>
+          <h3 class="service-name">Growth Sprint</h3>
+          <p class="service-tagline">Clarity. Direction. A plan that actually ships.</p>
+          <ul class="service-outcomes">
+            <li>Full growth diagnostic</li>
+            <li>90-day action plan</li>
+            <li>Priority bottleneck fixed</li>
+            <li>System blueprint delivered</li>
+          </ul>
+          <a href="tel:+918178630426" class="btn btn-ghost btn-full">Start the Sprint →</a>
+        </div>
+
+        <div class="service-card service-card-featured reveal reveal-delay-2">
+          <div class="service-badge">Most Chosen</div>
+          <div class="service-label">Full system</div>
+          <div class="service-duration">3–12 Months</div>
+          <h3 class="service-name">Growth Partnership</h3>
+          <p class="service-tagline">Full-stack strategy + execution. We become your growth team.</p>
+          <ul class="service-outcomes">
+            <li>Strategy + execution, integrated</li>
+            <li>Brand, GTM, product, tech — all covered</li>
+            <li>Weekly momentum check-ins</li>
+            <li>Custom IP and tools built for you</li>
+            <li>Compound growth, month over month</li>
+          </ul>
+          <a href="tel:+918178630426" class="btn btn-primary btn-glow btn-full">Get the Partnership →</a>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-label">For fast movers</div>
+          <div class="service-duration">60–90 Days</div>
+          <h3 class="service-name">Launch & GTM</h3>
+          <p class="service-tagline">New product. New market. Zero time to waste.</p>
+          <ul class="service-outcomes">
+            <li>End-to-end launch system</li>
+            <li>Messaging + positioning nailed</li>
+            <li>Channel strategy + execution</li>
+            <li>First 100 customers in sight</li>
+          </ul>
+          <a href="tel:+918178630426" class="btn btn-ghost btn-full">Launch Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ TECH ADVANTAGE ═══ -->
+  <section class="section tech-section" id="tech">
+    <div class="container">
+      <div class="section-label reveal">The Unfair Edge</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        Every problem<br /><em>becomes an asset.</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        We don't just solve bottlenecks.<br />We turn them into products.
+      </p>
+
+      <div class="tech-layout">
+        <div class="tech-flywheel reveal reveal-delay-2">
+          <div class="flywheel-container">
+            <div class="flywheel-ring flywheel-outer"></div>
+            <div class="flywheel-ring flywheel-mid"></div>
+            <div class="flywheel-core">
+              <span>Growth<br/>IP</span>
+            </div>
+            <div class="flywheel-step" style="--angle: 0deg;">
+              <div class="flywheel-step-inner">Identify<br/>Bottleneck</div>
+            </div>
+            <div class="flywheel-step" style="--angle: 90deg;">
+              <div class="flywheel-step-inner">Build<br/>Tool</div>
+            </div>
+            <div class="flywheel-step" style="--angle: 180deg;">
+              <div class="flywheel-step-inner">Deploy &<br/>Automate</div>
+            </div>
+            <div class="flywheel-step" style="--angle: 270deg;">
+              <div class="flywheel-step-inner">Compound<br/>Advantage</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-tools reveal reveal-delay-3">
+          <div class="tools-label">Example tools we've built:</div>
+          <div class="tools-grid">
+            <div class="tool-card">
+              <div class="tool-icon">🔍</div>
+              <div class="tool-info">
+                <div class="tool-name">Lead Intel Tool</div>
+                <div class="tool-desc">Turns prospect behavior into qualified signals</div>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-icon">📝</div>
+              <div class="tool-info">
+                <div class="tool-name">Content OS</div>
+                <div class="tool-desc">Automated content engine from one core idea</div>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-icon">📊</div>
+              <div class="tool-info">
+                <div class="tool-name">GTM Tracker</div>
+                <div class="tool-desc">Real-time launch visibility across every channel</div>
+              </div>
+            </div>
+            <div class="tool-card">
+              <div class="tool-icon">🤖</div>
+              <div class="tool-info">
+                <div class="tool-name">Brand Audit AI</div>
+                <div class="tool-desc">Instant brand gap analysis with fix roadmap</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ PROCESS ═══ -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <div class="section-label reveal">The Experience</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        No delays. No fluff.<br /><em>Just movement.</em>
+      </h2>
+
+      <div class="process-timeline">
+        <div class="process-progress-bar">
+          <div class="process-progress-fill" id="processProgress"></div>
+        </div>
+        <div class="process-steps">
+          <div class="process-step reveal reveal-delay-1">
+            <div class="step-marker">
+              <div class="step-dot"></div>
+              <div class="step-num">01</div>
+            </div>
+            <div class="step-content">
+              <div class="step-time">Day 1–3</div>
+              <h4 class="step-title">Discovery Call</h4>
+              <p class="step-desc">30-min deep dive. We map your real problem, not what you think it is.</p>
+            </div>
+          </div>
+          <div class="process-step reveal reveal-delay-2">
+            <div class="step-marker">
+              <div class="step-dot"></div>
+              <div class="step-num">02</div>
+            </div>
+            <div class="step-content">
+              <div class="step-time">Day 4–7</div>
+              <h4 class="step-title">Diagnosis & Proposal</h4>
+              <p class="step-desc">We show you exactly what's broken and how we fix it. No fluff diagnosis.</p>
+            </div>
+          </div>
+          <div class="process-step reveal reveal-delay-3">
+            <div class="step-marker">
+              <div class="step-dot"></div>
+              <div class="step-num">03</div>
+            </div>
+            <div class="step-content">
+              <div class="step-time">Week 2–4</div>
+              <h4 class="step-title">Sprint / Onboarding</h4>
+              <p class="step-desc">Immediate action. We ship before most agencies finish their kickoff deck.</p>
+            </div>
+          </div>
+          <div class="process-step reveal reveal-delay-4">
+            <div class="step-marker">
+              <div class="step-dot"></div>
+              <div class="step-num">04</div>
+            </div>
+            <div class="step-content">
+              <div class="step-time">Month 1–3</div>
+              <h4 class="step-title">Execute & Iterate</h4>
+              <p class="step-desc">Weekly check-ins. Data-driven pivots. Momentum, not maintenance.</p>
+            </div>
+          </div>
+          <div class="process-step reveal reveal-delay-5">
+            <div class="step-marker">
+              <div class="step-dot active"></div>
+              <div class="step-num">05</div>
+            </div>
+            <div class="step-content">
+              <div class="step-time">Ongoing</div>
+              <h4 class="step-title">Compound & Scale</h4>
+              <p class="step-desc">Building IP and momentum. Every month better than the last. That's compounding.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ WHY NOW ═══ -->
+  <section class="section whynow-section" id="whynow">
+    <div class="container">
+      <div class="section-label reveal">The Shift</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        The old growth model<br /><em>is dead.</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        The rules changed. Most agencies didn't get the memo.
+      </p>
+
+      <div class="whynow-grid">
+        <div class="whynow-card reveal reveal-delay-1">
+          <div class="whynow-icon">⚡</div>
+          <h4>AI killed execution advantage</h4>
+          <p>Every team has access to the same tools. Execution is table stakes now. System thinking is the edge.</p>
+        </div>
+        <div class="whynow-card reveal reveal-delay-2">
+          <div class="whynow-icon">💸</div>
+          <h4>Agencies still sell hours</h4>
+          <p>Hourly models don't align incentives. They get paid for activity. You need someone paid for outcomes.</p>
+        </div>
+        <div class="whynow-card reveal reveal-delay-3">
+          <div class="whynow-icon">🔧</div>
+          <h4>Founders need systems, not services</h4>
+          <p>One-off services leave gaps. A connected system compounds. That's the difference between traction and growth.</p>
+        </div>
+      </div>
+
+      <div class="whynow-statement reveal reveal-delay-3">
+        <p>The founders who win in 2025 aren't the ones who work harder.<br />
+        They're the ones who <strong>operate smarter</strong> — with better systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ TEAM ═══ -->
+  <section class="section team-section" id="team">
+    <div class="container">
+      <div class="section-label reveal">The People</div>
+      <h2 class="section-headline reveal reveal-delay-1">
+        Built by founders.<br /><em>For founders.</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        We've been in the room where it breaks. That's why we know how to fix it.
+      </p>
+
+      <div class="team-grid">
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar">
+            <div class="avatar-initials">V</div>
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">Vishal</h4>
+            <p class="team-role">Growth Strategy & Product</p>
+            <p class="team-bio">Connects product thinking with market reality. Removes guesswork from every roadmap.</p>
+          </div>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-avatar">
+            <div class="avatar-initials">K</div>
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">Karan</h4>
+            <p class="team-role">GTM & Execution</p>
+            <p class="team-bio">Ships faster than most teams plan. Turns strategy into measurable traction.</p>
+          </div>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <div class="team-avatar">
+            <div class="avatar-initials">A</div>
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">Aayush</h4>
+            <p class="team-role">Brand & Tech</p>
+            <p class="team-bio">Turns bottlenecks into products. Builds the tools that make the system compound.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ FINAL CTA ═══ -->
+  <section class="section finalcta-section" id="cta">
+    <canvas id="ctaCanvas" class="cta-canvas"></canvas>
+    <div class="container finalcta-inner">
+      <div class="finalcta-badge reveal">Limited Partnerships Open</div>
+      <h2 class="finalcta-headline reveal reveal-delay-1">
+        This is not an agency.<br /><em>This is your unfair advantage.</em>
+      </h2>
+      <p class="finalcta-sub reveal reveal-delay-2">
+        Stop patching. Start compounding.<br />
+        One call. We'll show you exactly where the system is broken.
+      </p>
+      <div class="finalcta-ctas reveal reveal-delay-3">
+        <a href="tel:+918178630426" class="btn btn-primary btn-glow btn-large">Fix My Growth</a>
+        <a href="tel:+918178630426" class="btn btn-ghost btn-large">Talk to Founders</a>
+      </div>
+      <p class="finalcta-note reveal reveal-delay-4">
+        No pitch. No deck. Just clarity.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <span class="logo-mark">G</span>
+          <span class="logo-text">GrowthGen</span>
+        </a>
+        <p class="footer-tagline">Growth Operating System for Startups & Scaleups.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">System</div>
+          <a href="#solution">What We Do</a>
+          <a href="#tech">Tech Advantage</a>
+          <a href="#process">The Process</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Engage</div>
+          <a href="#services">Growth Sprint</a>
+          <a href="#services">Growth Partnership</a>
+          <a href="#services">Launch & GTM</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Connect</div>
+          <a href="tel:+918178630426">+91 81786 30426</a>
+          <a href="https://growthgen.online" target="_blank">growthgen.online</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 GrowthGen. All rights reserved.</span>
+      <span class="footer-signal">No fluff. Only signal. ✦</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
