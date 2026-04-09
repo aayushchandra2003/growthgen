@@ -1,0 +1,33 @@
+{
+  "name": "GrowthGen — Growth Operating System",
+  "short_name": "GrowthGen",
+  "description": "Your Growth Operating System. Strategy, execution, brand, and tech in one compounding system.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}

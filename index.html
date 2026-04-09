@@ -6,12 +6,35 @@
   <title>GrowthGen — Growth Operating System for Startups</title>
   <meta name="description" content="GrowthGen is not an agency. It's your Growth Operating System. We connect strategy, execution, brand, and tech into one compounding system." />
   <meta name="theme-color" content="#080808" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="GrowthGen" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+  <link rel="apple-touch-icon" href="icons/icon-192.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- INSTALL BANNER -->
+  <div class="install-banner" id="installBanner" hidden>
+    <div class="install-banner-inner">
+      <svg class="install-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M9 2v9m0 0l3.5-3.5M9 11L5.5 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 13v1.5A1.5 1.5 0 004.5 16h9a1.5 1.5 0 001.5-1.5V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="install-text">Install GrowthGen</span>
+      <button class="install-btn" id="installBtn">Install</button>
+      <button class="install-dismiss" id="installDismiss" aria-label="Dismiss">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
 
   <!-- NOISE TEXTURE OVERLAY -->
   <div class="noise-overlay"></div>
@@ -74,7 +97,7 @@
       <div class="system-diagram">
         <div class="sys-node" data-node="product">
           <div class="sys-node-inner">
-            <div class="sys-icon">⬡</div>
+            <div class="sys-icon"></div>
             <span>Product</span>
           </div>
         </div>
@@ -84,7 +107,7 @@
         </div>
         <div class="sys-node" data-node="gtm">
           <div class="sys-node-inner">
-            <div class="sys-icon">◈</div>
+            <div class="sys-icon"></div>
             <span>GTM</span>
           </div>
         </div>
@@ -94,7 +117,7 @@
         </div>
         <div class="sys-node" data-node="brand">
           <div class="sys-node-inner">
-            <div class="sys-icon">◉</div>
+            <div class="sys-icon"></div>
             <span>Brand</span>
           </div>
         </div>
@@ -104,7 +127,7 @@
         </div>
         <div class="sys-node" data-node="execution">
           <div class="sys-node-inner">
-            <div class="sys-icon">⚡</div>
+            <div class="sys-icon"></div>
             <span>Execution</span>
           </div>
         </div>
@@ -127,29 +150,29 @@
   <div class="ticker-wrap">
     <div class="ticker">
       <span>Strategy that ships</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>No fluff. Only signal</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>We fix, not just advise</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>Systems over services</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>Built by founders. For founders</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>Remove guesswork. Add compound</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>Strategy that ships</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>No fluff. Only signal</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>We fix, not just advise</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>Systems over services</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>Built by founders. For founders</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
       <span>Remove guesswork. Add compound</span>
-      <span class="ticker-dot">✦</span>
+      <span class="ticker-dot"></span>
     </div>
   </div>
 
@@ -217,7 +240,7 @@
         <!-- ROW 1 -->
         <div class="system-block reveal reveal-delay-1">
           <div class="system-block-number">01</div>
-          <div class="system-block-icon">⬡</div>
+          <div class="system-block-icon"></div>
           <h3>Product Direction</h3>
           <p>What to build. Who it's for. Why now. We remove guesswork from your roadmap.</p>
           <div class="system-block-tags">
@@ -232,7 +255,7 @@
         </div>
         <div class="system-block reveal reveal-delay-2">
           <div class="system-block-number">02</div>
-          <div class="system-block-icon">◈</div>
+          <div class="system-block-icon"></div>
           <h3>GTM & Launch</h3>
           <p>Messaging. Channels. Execution. We ship your launch, not just plan it.</p>
           <div class="system-block-tags">
@@ -244,13 +267,13 @@
         <!-- ROW 2: divider with circuit line -->
         <div class="system-arrow system-arrow-v reveal reveal-delay-3">
           <div class="arrow-line"></div>
-          <div class="arrow-head">⟳</div>
+          <div class="arrow-head"></div>
           <div class="arrow-line"></div>
         </div>
         <!-- ROW 3 (reverse flow) -->
         <div class="system-block reveal reveal-delay-4">
           <div class="system-block-number">04</div>
-          <div class="system-block-icon">⚡</div>
+          <div class="system-block-icon"></div>
           <h3>In-House Tech</h3>
           <p>Custom tools. Automated systems. We don't just advise. We build your advantage.</p>
           <div class="system-block-tags">
@@ -265,7 +288,7 @@
         </div>
         <div class="system-block reveal reveal-delay-3">
           <div class="system-block-number">03</div>
-          <div class="system-block-icon">◉</div>
+          <div class="system-block-icon"></div>
           <h3>Brand & Positioning</h3>
           <p>Narrative. Identity. Trust. Your brand becomes the moat others can't copy.</p>
           <div class="system-block-tags">
@@ -290,6 +313,7 @@
         Others do parts.<br /><em>We own the outcome.</em>
       </h2>
 
+      <div class="comparison-table-wrap">
       <div class="comparison-table reveal reveal-delay-2">
         <div class="comp-header">
           <div class="comp-cell comp-label"></div>
@@ -344,6 +368,7 @@
           <div class="comp-cell comp-highlight"><span class="comp-check">✓</span></div>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
@@ -360,25 +385,25 @@
 
       <div class="audience-grid">
         <div class="audience-card reveal reveal-delay-1">
-          <div class="audience-icon">🔁</div>
+          <div class="audience-num">01</div>
           <div class="audience-tag">5-Year Stagnant Startups</div>
           <p class="audience-pain">"You've tried agencies.<br />You've tried hiring.<br /><strong>Nothing clicked.</strong>"</p>
           <p class="audience-fix">You don't need more effort. You need a connected system that stops the leak.</p>
         </div>
         <div class="audience-card reveal reveal-delay-2">
-          <div class="audience-icon">🚀</div>
+          <div class="audience-num">02</div>
           <div class="audience-tag">New Unfunded Startups</div>
           <p class="audience-pain">"Day 1. No budget for mistakes.<br /><strong>Need to build right from scratch.</strong>"</p>
           <p class="audience-fix">We help you get product, brand, and GTM right before the first rupee burns wrong.</p>
         </div>
         <div class="audience-card reveal reveal-delay-3">
-          <div class="audience-icon">📦</div>
+          <div class="audience-num">03</div>
           <div class="audience-tag">D2C & E-commerce Brands</div>
           <p class="audience-pain">"Content's going out.<br /><strong>Revenue isn't coming in.</strong>"</p>
           <p class="audience-fix">We fix the gap between what you're saying and what customers are buying.</p>
         </div>
         <div class="audience-card reveal reveal-delay-4">
-          <div class="audience-icon">📈</div>
+          <div class="audience-num">04</div>
           <div class="audience-tag">B2B SaaS Companies</div>
           <p class="audience-pain">"Founder-led sales.<br />Thin pipeline.<br /><strong>Need a system.</strong>"</p>
           <p class="audience-fix">We build the GTM engine that lets you stop being the whole sales team.</p>
@@ -484,28 +509,28 @@
           <div class="tools-label">Example tools we've built:</div>
           <div class="tools-grid">
             <div class="tool-card">
-              <div class="tool-icon">🔍</div>
+              <div class="tool-marker"></div>
               <div class="tool-info">
                 <div class="tool-name">Lead Intel Tool</div>
                 <div class="tool-desc">Turns prospect behavior into qualified signals</div>
               </div>
             </div>
             <div class="tool-card">
-              <div class="tool-icon">📝</div>
+              <div class="tool-marker"></div>
               <div class="tool-info">
                 <div class="tool-name">Content OS</div>
                 <div class="tool-desc">Automated content engine from one core idea</div>
               </div>
             </div>
             <div class="tool-card">
-              <div class="tool-icon">📊</div>
+              <div class="tool-marker"></div>
               <div class="tool-info">
                 <div class="tool-name">GTM Tracker</div>
                 <div class="tool-desc">Real-time launch visibility across every channel</div>
               </div>
             </div>
             <div class="tool-card">
-              <div class="tool-icon">🤖</div>
+              <div class="tool-marker"></div>
               <div class="tool-info">
                 <div class="tool-name">Brand Audit AI</div>
                 <div class="tool-desc">Instant brand gap analysis with fix roadmap</div>
@@ -603,17 +628,17 @@
 
       <div class="whynow-grid">
         <div class="whynow-card reveal reveal-delay-1">
-          <div class="whynow-icon">⚡</div>
+          <div class="whynow-num">01</div>
           <h4>AI killed execution advantage</h4>
           <p>Every team has access to the same tools. Execution is table stakes now. System thinking is the edge.</p>
         </div>
         <div class="whynow-card reveal reveal-delay-2">
-          <div class="whynow-icon">💸</div>
+          <div class="whynow-num">02</div>
           <h4>Agencies still sell hours</h4>
           <p>Hourly models don't align incentives. They get paid for activity. You need someone paid for outcomes.</p>
         </div>
         <div class="whynow-card reveal reveal-delay-3">
-          <div class="whynow-icon">🔧</div>
+          <div class="whynow-num">03</div>
           <h4>Founders need systems, not services</h4>
           <p>One-off services leave gaps. A connected system compounds. That's the difference between traction and growth.</p>
         </div>
@@ -725,8 +750,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 GrowthGen. All rights reserved.</span>
-      <span class="footer-signal">No fluff. Only signal. ✦</span>
+      <span>© 2026 GrowthGen. All rights reserved.</span>
+      <span class="footer-signal">No fluff. Only signal.</span>
     </div>
   </footer>
 

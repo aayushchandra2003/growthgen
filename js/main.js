@@ -10,6 +10,7 @@
   const qs  = (sel, ctx = document) => ctx.querySelector(sel);
   const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   const rnd = (min, max) => Math.random() * (max - min) + min;
+  const isTouchDevice = () => window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
   /* ─── NAV SCROLL ─────────────────────────────────────────── */
   const navbar = qs('#navbar');
@@ -32,26 +33,35 @@
   const navMobile = qs('#navMobile');
 
   if (navToggle && navMobile) {
-    navToggle.addEventListener('click', () => {
-      navMobile.classList.toggle('open');
-      const isOpen = navMobile.classList.contains('open');
-      navToggle.setAttribute('aria-expanded', isOpen);
-      // Animate hamburger
+    let scrollPos = 0;
+
+    function openNav() {
+      scrollPos = window.scrollY;
+      navMobile.classList.add('open');
+      document.body.classList.add('nav-open');
+      document.body.style.top = `-${scrollPos}px`;
+      navToggle.setAttribute('aria-expanded', 'true');
       const spans = qsa('span', navToggle);
-      if (isOpen) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-      } else {
-        spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-      }
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    }
+
+    function closeNav() {
+      navMobile.classList.remove('open');
+      document.body.classList.remove('nav-open');
+      document.body.style.top = '';
+      window.scrollTo(0, scrollPos);
+      navToggle.setAttribute('aria-expanded', 'false');
+      qsa('span', navToggle).forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    }
+
+    navToggle.addEventListener('click', () => {
+      navMobile.classList.contains('open') ? closeNav() : openNav();
     });
-    // Close on link click
+
     qsa('a', navMobile).forEach(a => {
-      a.addEventListener('click', () => {
-        navMobile.classList.remove('open');
-        qsa('span', navToggle).forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-      });
+      a.addEventListener('click', closeNav);
     });
   }
 
@@ -78,7 +88,7 @@
     const ctx = heroCanvas.getContext('2d');
     let W, H, particles = [], animFrame;
 
-    const PARTICLE_COUNT = 80;
+    const PARTICLE_COUNT = isTouchDevice() ? 30 : 80;
     const ACCENT_COLOR = '0, 255, 136';
     const LINE_COLOR   = '255, 255, 255';
 
@@ -335,8 +345,9 @@
     });
   });
 
-  /* ─── CARD MAGNETIC HOVER EFFECT ─────────────────────────── */
+  /* ─── CARD MAGNETIC HOVER EFFECT (desktop only) ──────────── */
   function addMagneticEffect(selectors) {
+    if (isTouchDevice()) return;
     qsa(selectors).forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
@@ -486,24 +497,26 @@
     });
   }
 
-  /* ─── PARALLAX HERO ELEMENTS ─────────────────────────────── */
-  let ticking = false;
-  function onParallaxScroll() {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        const y = window.scrollY;
-        const heroContent = qs('.hero-content');
-        const heroVisual  = qs('.hero-visual');
-        if (heroContent && y < window.innerHeight) {
-          heroContent.style.transform = `translateY(${y * 0.12}px)`;
-          heroVisual.style.transform  = `translateY(${y * 0.06}px)`;
-        }
-        ticking = false;
-      });
-      ticking = true;
+  /* ─── PARALLAX HERO ELEMENTS (desktop only) ───────────────── */
+  if (!isTouchDevice()) {
+    let ticking = false;
+    function onParallaxScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const y = window.scrollY;
+          const heroContent = qs('.hero-content');
+          const heroVisual  = qs('.hero-visual');
+          if (heroContent && y < window.innerHeight) {
+            heroContent.style.transform = `translateY(${y * 0.12}px)`;
+            heroVisual.style.transform  = `translateY(${y * 0.06}px)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     }
+    window.addEventListener('scroll', onParallaxScroll, { passive: true });
   }
-  window.addEventListener('scroll', onParallaxScroll, { passive: true });
 
   /* ─── GSAP-STYLE COUNTER FOR STAT ────────────────────────── */
   const statLine = qs('.problem-loop');
@@ -557,20 +570,22 @@
     toolObserver.observe(toolsSection);
   }
 
-  /* ─── GLOWING BORDER CARDS ON MOUSE MOVE ─────────────────── */
-  qsa('.service-card-featured').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.background = `
-        radial-gradient(300px circle at ${x}px ${y}px, rgba(0,255,136,0.08) 0%, rgba(0,255,136,0.04) 40%, transparent 80%)
-      `;
+  /* ─── GLOWING BORDER CARDS ON MOUSE MOVE (desktop only) ──── */
+  if (!isTouchDevice()) {
+    qsa('.service-card-featured').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.background = `
+          radial-gradient(300px circle at ${x}px ${y}px, rgba(0,255,136,0.08) 0%, rgba(0,255,136,0.04) 40%, transparent 80%)
+        `;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.background = '';
+      });
     });
-    card.addEventListener('mouseleave', () => {
-      card.style.background = '';
-    });
-  });
+  }
 
   /* ─── SECTION ENTRANCE — ACCENT LINE DRAW ─────────────────── */
   const sectionLabels = qsa('.section-label');
@@ -616,6 +631,71 @@
       el.classList.add('visible');
     });
   }, 100);
+
+  /* ─── PWA INSTALL PROMPT ───────────────────────────────────── */
+  let deferredPrompt = null;
+  const installBanner = qs('#installBanner');
+  const installBtn = qs('#installBtn');
+  const installDismiss = qs('#installDismiss');
+
+  // Don't show if already installed or previously dismissed
+  function isInstalled() {
+    return window.matchMedia('(display-mode: standalone)').matches
+      || window.navigator.standalone === true;
+  }
+
+  function wasDismissed() {
+    try { return localStorage.getItem('growthgen-install-dismissed') === '1'; }
+    catch { return false; }
+  }
+
+  function showBanner() {
+    if (installBanner && !isInstalled() && !wasDismissed()) {
+      installBanner.hidden = false;
+    }
+  }
+
+  function hideBanner() {
+    if (installBanner) {
+      installBanner.hidden = true;
+    }
+  }
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    showBanner();
+  });
+
+  if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      hideBanner();
+    });
+  }
+
+  if (installDismiss) {
+    installDismiss.addEventListener('click', () => {
+      hideBanner();
+      try { localStorage.setItem('growthgen-install-dismissed', '1'); }
+      catch {}
+    });
+  }
+
+  window.addEventListener('appinstalled', () => {
+    hideBanner();
+    deferredPrompt = null;
+  });
+
+  /* ─── SERVICE WORKER REGISTRATION ────────────────────────── */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
+  }
 
   console.log('%cGrowthGen OS — No fluff. Only signal.', 'color:#00FF88;font-weight:bold;font-size:14px;');
 
